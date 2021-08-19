@@ -16,7 +16,15 @@ describe("Light Command Pattern", () => {
         expect(expectation).toEqual(reality)
     })
 
+
     test("Light Red",()=>{
+        let expectation = createInvoker(new lightOnCommand(new RedLight()))
+        remoteController.setCommand(new lightOffCommand(new RedLight()))
+        let reality = remoteController.executeCommand()
+        expect(expectation).toEqual(reality)
+    })
+
+    test("Light Red Luminosity +1",()=>{
         let expectation = createInvoker(new lightOnCommand(new RedLight()))
         remoteController.setCommand(new lightOffCommand(new RedLight()))
         let reality = remoteController.executeCommand()
