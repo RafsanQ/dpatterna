@@ -1,10 +1,10 @@
 import {
     light,
     RedLight,
+    Command,
     increaseLuminosityCommand,
     decreaseLuminosityCommand,
     RemoteController,
-    Command,
     lightOnCommand,
     lightOffCommand
 } from "../../patterns/command/LightCommand";
@@ -51,6 +51,7 @@ export function orderHandler(command: string): string {
         default:
 
     }
+    
     // @ts-ignore
     return result;
 

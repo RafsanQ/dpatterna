@@ -93,5 +93,3 @@ export class RemoteController {
         return this.commandSlot.execute()
     }
 }
-
-
